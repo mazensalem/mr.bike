@@ -1,0 +1,119 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR. BIKE</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="overflow-x-hidden p-0 w-full h-full text-blue-400 bg-white">
+    <header class="bg-black text-white w-full h-44">
+        <div class="p-5 float-left">
+            <a href="/">
+                <img class="rounded-full object-contain w-32 h-32 inline-block mr-2" src="./img/Logo.jpg" alt="L" />
+                <span class="text-xl md:text-4xl align-middle">MR. BIKE</span>
+            </a>
+        </div>
+        <nav class="mr-5 float-right md:mr-0 md:float-none h-full flex text-2xl justify-around items-center">
+            <div id="mobilnav" class="flex hidden z-10 absolute w-full h-full bg-black text-white top-0 left-0 ">
+                <ul class="m-auto w-1/4 flex flex-col items-center">
+                    <li class="text-blue-400"><a href="/">Home</a></li>
+                    <li class="mt-10 hover:text-blue-200"><a href="./products.html">Products</a></li>
+                    <li class="mt-10 hover:text-blue-200"><a href="./location.html">Location</a></li>
+                    <li class="mt-10 hover:text-blue-200"><a href="./contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="z-20 w-10 h-10 cursor-pointer md:hidden transition-transform" id="barsicon">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas"
+                    data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+                </svg>
+            </div>
+            <div class="hidden md:visible md:inline-block text-blue-400"><a href="/">Home</a></div>
+            <div class="hidden md:visible md:inline-block hover:text-blue-200"><a href="./products.html">Product</a>
+            </div>
+            <div class="hidden md:visible md:inline-block hover:text-blue-200"><a href="./location.html">Location</a>
+            </div>
+            <div class="hidden md:visible md:inline-block hover:text-blue-200"><a href="./contactus.html">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    <main class="md:h-100 text-black">
+        <img class="mt-3 md:mt-28 md:mr-4 lg:mr-9 w-full md:w-80 lg:w-96 float-right" src="./img/img1.jpg"
+            alt="Product img" />
+        <div class="inline-block ml-fifty transform -translate-x-2/4 mt-5 md:translate-x-0 md:mt-28 md:ml-8 lg:ml-28">
+            <h1 class="z-10 text-3xl text-blue-400">Title</h1>
+            <div class="w-96 mt-4">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque facilis sed et voluptatum quisquam
+                    consequuntur veritatis ab eos nam ratione modi accusantium unde optio magnam sequi quibusdam,
+                    reprehenderit voluptatibus. Quidem.</p>
+                <a href="./products.html">
+                    <button
+                        class="bg-black text-white hover:text-blue-400 border-none outline-none mt-3 rounded-xl p-3">
+                        See All Products
+                    </button>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-black mt-10 pt-2">
+        <div class="inline-block md:ml-10 lg:ml-40">
+            <ul class="inline-block">
+                <h2 class="mb-3">Catagory 1</h2>
+                <li class="mb-2"><a href="#">Link 1</a></li>
+                <li class="mb-2"><a href="#">Link 2</a></li>
+                <li class="mb-2"><a href="#">Link 3</a></li>
+            </ul>
+            <ul class="inline-block">
+                <h2 class="mb-3">Catagory 2</h2>
+                <li class="mb-2"><a href="#">Link 4</a></li>
+                <li class="mb-2"><a href="#">Link 5</a></li>
+                <li class="mb-2"><a href="#">Link 6</a></li>
+            </ul>
+        </div>
+        <div class="float-right w-60">
+            <div>
+                <img class="rounded-full object-contain w-20 h-20 inline-block mr-2" src="./img/Logo.jpg" alt="L" />
+            </div>
+            <div>
+                <span>Email</span>: <a href="mailto:example@example.com">info@example.com</a>
+                <br />
+                <span>Phone</span>: 01234567890
+            </div>
+        </div>
+    </footer>
+    <script>
+        let bariconelem = document.getElementById("barsicon")
+        let moblenavelem = document.getElementById("mobilnav")
+        let isx = false;
+        bariconelem.onmousedown = (e) => {
+            bariconelem.style.transform = 'scale(1.2)'
+        }
+        bariconelem.onmouseup = () => {
+            bariconelem.style.transform = 'none'
+        }
+        bariconelem.onclick = () => {
+            moblenavelem.classList.toggle("hidden")
+            bariconelem.classList.toggle("-mt-32")
+            if (!isx) {
+                bariconelem.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/></svg>'
+                isx = true;
+                document.body.style.overflow = "hidden"
+            } else {
+                bariconelem.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas"
+                    data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+                </svg>`
+                isx = false;
+                document.body.style.overflow = "auto"
+                document.body.style.overflowX = "hidden"
+            }
+        }
+    </script>
+</body>
+
+</html>
