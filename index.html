@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MR. BIKE</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./img/Logo.jpg" type="image/x-icon">
 </head>
 
 <body class="overflow-x-hidden p-0 w-full h-full text-blue-400 bg-white">
@@ -17,7 +18,7 @@
             </a>
         </div>
         <nav class="mr-5 float-right md:mr-0 md:float-none h-full flex text-2xl justify-around items-center">
-            <div id="mobilnav" class="flex hidden z-10 absolute w-full h-full bg-black text-white top-0 left-0 ">
+            <div id="mobilnav" class="hidden z-10 absolute w-full h-full bg-black text-white top-0 left-0 ">
                 <ul class="m-auto w-1/4 flex flex-col items-center">
                     <li class="text-blue-400"><a href="/">Home</a></li>
                     <li class="mt-10 hover:text-blue-200"><a href="./products.html">Products</a></li>
@@ -41,26 +42,26 @@
             </div>
         </nav>
     </header>
+
     <main class="md:h-100 text-black">
         <img class="mt-3 md:mt-28 md:mr-4 lg:mr-9 w-full md:w-80 lg:w-96 float-right" src="./img/img1.jpg"
             alt="Product img" />
-        <div class="inline-block ml-fifty transform -translate-x-2/4 mt-5 md:translate-x-0 md:mt-28 md:ml-8 lg:ml-28">
+        <div
+            class="inline-block w-2/4 md:w-2/5 ml-fifty transform -translate-x-2/4 mt-5 md:translate-x-0 md:mt-28 md:ml-8 lg:ml-28">
             <h1 class="z-10 text-3xl text-blue-400">Title</h1>
-            <div class="w-96 mt-4">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque facilis sed et voluptatum quisquam
-                    consequuntur veritatis ab eos nam ratione modi accusantium unde optio magnam sequi quibusdam,
-                    reprehenderit voluptatibus. Quidem.</p>
-                <a href="./products.html">
-                    <button
-                        class="bg-black text-white hover:text-blue-400 border-none outline-none mt-3 rounded-xl p-3">
-                        See All Products
-                    </button>
-                </a>
-            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia minus consequuntur rerum amet sit
+                incidunt. Dicta quam eveniet maiores atque autem suscipit dignissimos dolores facere distinctio
+                voluptatibus, ipsa sed impedit.</p>
+            <a href="./products.html">
+                <button class="bg-black text-white hover:text-blue-400 border-none outline-none mt-3 rounded-xl p-3">
+                    See All Products
+                </button>
+            </a>
         </div>
     </main>
+
     <footer class="bg-black mt-10 pt-2">
-        <div class="inline-block md:ml-10 lg:ml-40">
+        <div class="inline-block ml-0 md:ml-10 lg:ml-40">
             <ul class="inline-block">
                 <h2 class="mb-3">Catagory 1</h2>
                 <li class="mb-2"><a href="#">Link 1</a></li>
@@ -74,9 +75,10 @@
                 <li class="mb-2"><a href="#">Link 6</a></li>
             </ul>
         </div>
-        <div class="float-right w-60">
+        <div class="float-right w-50 text-sm sm:text-base">
             <div>
-                <img class="rounded-full object-contain w-20 h-20 inline-block mr-2" src="./img/Logo.jpg" alt="L" />
+                <img class="rounded-full object-contain w-10 h-10 sm:w-20 sm:h-20 inline-block mr-2"
+                    src="./img/Logo.jpg" alt="L" />
             </div>
             <div>
                 <span>Email</span>: <a href="mailto:example@example.com">info@example.com</a>
@@ -85,6 +87,7 @@
             </div>
         </div>
     </footer>
+
     <script>
         let bariconelem = document.getElementById("barsicon")
         let moblenavelem = document.getElementById("mobilnav")
@@ -98,6 +101,7 @@
         bariconelem.onclick = () => {
             moblenavelem.classList.toggle("hidden")
             bariconelem.classList.toggle("-mt-32")
+            moblenavelem.classList.toggle("flex")
             if (!isx) {
                 bariconelem.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/></svg>'
                 isx = true;
